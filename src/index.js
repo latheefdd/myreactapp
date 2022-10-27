@@ -9,9 +9,9 @@ const arr1=['MSR1','MSR2','MSR3','FEED','WMO1','WMO2','FSO','CG1O',
 const arr2=['ENC2R-MON','MOD1M-MON','MOD1R-MON','MOD2M-MON','MOD2R-MON','OLD-ES-OUT15','ENC1M-IN','ENC1R-IN'
 ,'ENC2M-IN','ENC2R-IN','ASI-IRD1-IN','X','X','X','ASI-IRD2-IN','1-9"MON']
 const arr3=['2-9"MON','3-9"MON','4-9"MON','A/V-MON','17"MON','WMIN1','WMIN2','FSIN',
-'CG1IN-HD','CG2IN-HD','HD TO MSR','X','X','X','X','X']
-const arr4=['X','X','X','X','X','X','X','WMO TO OLD ES',
-'WM-MON','X','X','x','x','x','x','x'];
+'CG1IN-HD','CG2IN-HD','HD TO MSR']
+const arr4=['WMO TO OLD ES',
+'WM-MON'];
 class Square extends React.Component {
 
     constructor(props) {
