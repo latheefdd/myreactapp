@@ -1,0 +1,58 @@
+ //setXlimit(offsetX);
+    //setXvalue(0);
+    //setYvalue(offsetY);
+    //setXv(0);
+    //ctxRef.current.moveTo(0,yvalue);
+    //intervalID=setInterval(() => {
+      //setXvalue( xvalue + 1);
+    //}, 30);
+    const moveEffect=({nativeEvent})=>{
+    const {offsetX,offsetY}=nativeEvent;
+    if(offsetX>25&&offsetX<75){
+      if(offsetY>25&&offsetY<75){
+      neonRect(25,25,50,50,252,90,184);
+      return;}
+    }
+    neonRect(25,25,50,50,243,243,21);
+  }
+  const draw = () => {
+    
+    if(xv<xlimit)
+    {
+      setXv((xv)=>xv+1);
+      ctxRef.current.lineTo(xv, yvalue);
+      ctxRef.current.stroke();
+    }
+    else{
+      setXv(0);
+      clearInterval(intervalID);
+    }
+ 
+  };
+  const clear = () => {
+    ctxRef.current.clearRect(
+      0,
+      0,
+      canvasRef.current.width,
+      canvasRef.current.height
+    );
+  };
+   // Import, state and ref events
+  const updateCanvas=()=> {
+    var imageObj1 = new Image();
+    imageObj1.src = 'https://drive.google.com/file/d/0B2w98I0ki2qdSmJLaDdhY2RDQWs/view?usp=sharing&resourcekey=0-dp7Ktx-m2AnfCXKTX-NRFg'
+ imageObj1.onload = function() {
+        ctxRef.current.drawImage(imageObj1,0,0);
+}
+//intervalID=setInterval(() => {
+      //setXvalue( xvalue + 1);
+   // }, 30);
+   const startDraw = ({nativeEvent}) => {
+    const {offsetX,offsetY}=nativeEvent;
+    ctxRef.current.beginPath();
+    ctxRef.current.moveTo(offsetX, offsetY); 
+  };
+  const stopDraw = () => {
+    ctxRef.current.closePath();
+
+  };
