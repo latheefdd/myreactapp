@@ -56,3 +56,74 @@
     ctxRef.current.closePath();
 
   };
+
+
+
+
+signup from
+////////////////
+  import React from "react";
+import Userfront from "@userfront/react";
+
+Userfront.init("6nzwrz6b");
+
+const SignupForm = Userfront.build({
+  toolId: "mkaral"
+});
+
+function App() {
+  return <SignupForm />;
+}
+
+export default App;
+
+////////////login
+import React from "react";
+import Userfront from "@userfront/react";
+
+Userfront.init("6nzwrz6b");
+
+const LoginForm = Userfront.build({
+  toolId: "konrnn"
+});
+
+function App() {
+  return <LoginForm />;
+}
+
+export default App;
+//////////////////password reset
+import React from "react";
+import Userfront from "@userfront/react";
+
+Userfront.init("6nzwrz6b");
+
+const PasswordResetForm = Userfront.build({
+  toolId: "akrdak"
+});
+
+function App() {
+  return <PasswordResetForm />;
+}
+
+export default App;
+//////////////////logout
+import React from "react";
+import Userfront from "@userfront/react";
+
+Userfront.init("6nzwrz6b");
+
+const LogoutButton = Userfront.build({
+  toolId: "dmdnda"
+});
+
+function App() {
+  return <LogoutButton />;
+}
+
+export default App;
+
+
+
+///inside Board
+<!--div-->{arr1.map(sw=>(<Square value={sw}/>))}<!--/div-->
